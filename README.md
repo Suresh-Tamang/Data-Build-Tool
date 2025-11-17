@@ -1,11 +1,11 @@
 # dbt + Snowflake — Data Warehouse Project
 
-This repository contains a dbt project and supporting files to build a data warehouse in Snowflake. The `snowflake/` folder contains the dbt project (models, seeds, snapshots, macros, and configuration). Use this project to develop, test, and deploy transformations for your Snowflake data warehouse.
+This repository contains a dbt project and supporting files to build a data warehouse in Snowflake. The `Data-Build-Tool/` folder contains the dbt project (models, seeds, snapshots, macros, and configuration). Use this project to develop, test, and deploy transformations for your Snowflake data warehouse.
 
 **Quick links**
-- dbt project: `snowflake/dbt_project.yml`
-- Example models: `snowflake/models/example/`
-- Compiled artifacts: `snowflake/target/compiled/`
+- dbt project: `Data-Build-Tool/dbt_project.yml`
+- Example models: `Data-Build-Tool/models/example/`
+- Compiled artifacts: `Data-Build-Tool/target/compiled/`
 - Logs: `logs/dbt.log`
 
 **Project Overview**
@@ -14,7 +14,7 @@ This project shows a typical dbt workflow for building a Snowflake-based data wa
 
 **Repository Structure (important paths)**
 
-- `snowflake/` — main dbt project directory
+- `Data-Build-Tool/` — main dbt project directory
   - `models/` — dbt models (SQL files)
   - `seeds/` — CSVs loaded by `dbt seed`
   - `snapshots/` — snapshot definitions
@@ -73,16 +73,16 @@ my_dbt_profile:
       client_session_keep_alive: False
 ```
 
-Set the profile name in `snowflake/dbt_project.yml` under `profile:` if it differs from the example above.
+Set the profile name in `Data-Build-Tool/dbt_project.yml` under `profile:` if it differs from the example above.
 
 Common commands
 ---------------
 
-Run these from the repository root (or `cd snowflake` to run them with default project directory):
+Run these from the repository root (or `cd Data-Build-Tool` to run them with default project directory):
 
 ```bash
 # Validate configuration & connectivity
-cd snowflake
+cd Data-Build-Tool
 dbt debug
 
 # Install dependencies (if any)
@@ -111,7 +111,7 @@ dbt docs serve
 Notes about compiled artifacts and logs
 -------------------------------------
 
-- dbt outputs compiled SQL and run artifacts to `snowflake/target/` (compiled SQL is useful for debugging).
+- dbt outputs compiled SQL and run artifacts to `Data-Build-Tool/target/` (compiled SQL is useful for debugging).
 - Logs are written to `logs/dbt.log` by default in this repository — check this file for detailed run output.
 
 Development workflow
